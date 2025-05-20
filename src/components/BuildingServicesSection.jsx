@@ -1,4 +1,5 @@
 import React from "react";
+import bgbuilding from "../assets/pic33.jpeg";
 
 const BuildingServicesSection = () => {
   const services = [
@@ -45,15 +46,27 @@ const BuildingServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="relative bg-[#f9f8f7] pt-14 pb-16">
-      <div className="max-w-6xl mx-auto px-4">
+    <section
+      id="services"
+      className="relative pt-14 pb-16 overflow-hidden"
+      style={{
+        backgroundImage: `url(${bgbuilding})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Background overlay to dim the image */}
+      <div className="absolute inset-0 bg-white/75 backdrop-brightness-95 z-0" />
+
+      <div className="relative z-10 max-w-6xl mx-auto px-4">
         <h2 className="text-2xl md:text-3xl font-bold uppercase text-[#2d2f32] mb-3 font-dm-serif">
           Building & Services
         </h2>
-        <p className="text-[#939698] mb-8 max-w-2xl font-inter">
+        <p className="text-[#555] mb-8 max-w-2xl font-inter">
           There are many variations of passages of Lorem Ipsum available, but
           the majority have suffered alteration in some form
         </p>
+
         {/* Feature grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mb-10">
           {services.map(({ label, img }) => (
@@ -75,6 +88,7 @@ const BuildingServicesSection = () => {
             </div>
           ))}
         </div>
+
         <a
           href="#"
           className="inline-block bg-[#8e6136] hover:bg-[#a18c5d] text-white font-medium py-2 px-6 rounded shadow text-xs uppercase tracking-wide transition-colors border-2 border-[#8e6136] hover:border-[#a18c5d] font-inter"

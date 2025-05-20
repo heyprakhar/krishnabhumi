@@ -39,7 +39,10 @@ const SpecificationsSection = () => {
       label: "Water Supply",
       content: "24 hrs. water supply from overhead tank.",
     },
-    { label: "Window", content: "UPVC/Aluminum sliding windows." },
+    {
+      label: "Window",
+      content: "UPVC/Aluminum sliding windows.",
+    },
   ];
 
   return (
@@ -52,28 +55,20 @@ const SpecificationsSection = () => {
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay for darkening */}
+      {/* Overlay */}
       <div className="absolute inset-0 bg-white/70 backdrop-brightness-95 z-0" />
 
-      {/* Large faint background text */}
-      {/* <span
-        className="absolute left-4 top-8 text-[72px] md:text-[140px] font-bold text-[#ededed] uppercase tracking-wide z-10 pointer-events-none select-none opacity-60 font-dm-serif"
-        style={{ letterSpacing: "5px", whiteSpace: "nowrap" }}
-      >
-        SPECIFICATIONS
-      </span> */}
-
       <div className="relative z-20 max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-8 items-start">
-        {/* Section image */}
+        {/* Section Image with Hover Animation */}
         <div className="flex-shrink-0 w-full md:w-1/2 flex items-center justify-center py-4">
           <img
             src="https://ext.same-assets.com/993979730/978028508.jpeg"
             alt="Specifications"
-            className="rounded-lg shadow-lg w-[340px] h-[220px] object-cover border"
+            className="rounded-lg shadow-lg w-[340px] h-[220px] object-cover border transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl"
           />
         </div>
 
-        {/* Right side: title, text, accordion */}
+        {/* Right Side */}
         <div className="w-full md:w-1/2 flex flex-col gap-5">
           <div>
             <h2 className="text-2xl md:text-3xl font-bold uppercase text-[#2d2f32] mb-2 font-dm-serif">

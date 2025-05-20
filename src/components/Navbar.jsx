@@ -15,16 +15,19 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-30 shadow bg-[#87633d]">
       <nav className="flex items-center justify-between px-4 md:px-12 py-3">
-        {/* Logo */}
+        {/* Logo & Brand */}
         <div className="flex items-center gap-2">
           <img
             src="https://ext.same-assets.com/993979730/3156024827.png"
             alt="King Architect Logo"
             className="h-10 w-auto"
           />
-          <span className="text-2xl tracking-wider font-bold text-[#f5f2eb] uppercase font-dm-serif">
+          <a
+            href="#"
+            className="text-2xl tracking-wider font-bold text-[#f5f2eb] uppercase font-dm-serif hover:text-[#e3c78f] transition-colors"
+          >
             <span className="text-[#e3c78f]">KrishnaBhumi</span>
-          </span>
+          </a>
         </div>
 
         {/* Nav Links */}

@@ -48,7 +48,7 @@ const SitePlanMasterPlanSection = () => {
             ))}
           </div>
 
-          {/* Price/highlighted block for plan */}
+          {/* Highlighted Plan Block */}
           <div className="bg-[#f9f8f7] border rounded-xl px-6 py-5 w-full shadow-sm mb-4">
             <div className="flex items-center justify-between mb-2">
               <div className="text-2xl font-bold text-[#a18c5d] font-dm-serif">
@@ -94,12 +94,12 @@ const SitePlanMasterPlanSection = () => {
           </div>
         </div>
 
-        {/* Right: Plan image */}
+        {/* Right: Plan image with hover effect */}
         <div className="w-full md:w-3/5 flex flex-col items-center">
           <img
             src="https://ext.same-assets.com/993979730/4017029983.jpeg"
             alt="Site Plan"
-            className="w-full md:w-[95%] max-w-lg rounded-lg shadow-lg border"
+            className="w-full md:w-[95%] max-w-lg rounded-lg border transition-transform duration-300 hover:scale-105 hover:shadow-xl"
           />
         </div>
       </div>
