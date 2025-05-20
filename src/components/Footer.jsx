@@ -1,6 +1,8 @@
 import React from "react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-[#8e6136] text-white pt-12 pb-4 font-inter">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-10 md:gap-16 justify-between items-start">
@@ -22,12 +24,12 @@ const Footer = () => {
             appealing social spaces.
           </div>
           <div className="flex gap-3 mt-2">
-            {/* Social icons placeholder */}
             <span className="w-6 h-6 bg-[#a18c5d] rounded-full flex items-center justify-center"></span>
             <span className="w-6 h-6 bg-[#a18c5d] rounded-full flex items-center justify-center"></span>
             <span className="w-6 h-6 bg-[#a18c5d] rounded-full flex items-center justify-center"></span>
           </div>
         </div>
+
         {/* Contact info */}
         <div className="flex-1 min-w-[200px]">
           <h4 className="font-semibold text-lg mb-3 font-dm-serif">
@@ -46,6 +48,7 @@ const Footer = () => {
             </li>
           </ul>
         </div>
+
         {/* Business channels */}
         <div className="flex-1 min-w-[200px]">
           <h4 className="font-semibold text-lg mb-3 font-dm-serif">
@@ -75,8 +78,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      {/* Bottom bar */}
       <div className="border-t border-[#b7a69c] mt-8 pt-3 text-[#f9f8f7] text-sm flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto px-4 gap-2">
-        <span>©️ 2021 KingArchitect. All Right Reserved</span>
+        <span>©️ {currentYear} KingArchitect. All Right Reserved</span>
         <div className="flex gap-6 text-[#ddcca8] text-sm mt-1 md:mt-0">
           <a href="#about" className="hover:underline">
             About
