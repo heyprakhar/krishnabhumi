@@ -1,36 +1,34 @@
 import React from "react";
-import bg1 from "../assets/pic44.jpeg"
+import bg1 from "../assets/pic44.jpeg";
 
 const HeroSection = () => {
   return (
     <section className="relative bg-[#f9f8f7] min-h-[540px] flex flex-col justify-center items-stretch overflow-x-hidden pb-6">
-      {/* Hero main image */}
+      {/* Hero Image */}
       <img
         src={bg1}
         alt="Modern Houses"
-        className="w-full h-[330px] md:h-[430px] object-cover object-center shadow-lg"
+        className="w-full h-[260px] sm:h-[300px] md:h-[430px] object-cover object-center shadow-lg"
       />
 
-      {/* Overlayed headline and CTA */}
-      <div className="absolute top-1/2 left-6 md:left-16 -translate-y-1/2 flex flex-col gap-5 max-w-[470px]">
-        {/* <h1
-          className="text-3xl md:text-5xl font-bold tracking-tight uppercase text-[#2d2f32] drop-shadow font-dm-serif"
-          style={{ lineHeight: "1.15" }}
-        >
-          Helping you and your
-          <br />
+      {/* Overlay: Headline + CTA */}
+      <div className="absolute top-1/2 left-4 sm:left-6 md:left-16 -translate-y-1/2 flex flex-col gap-4 sm:gap-5 max-w-[90%] sm:max-w-[400px] md:max-w-[470px]">
+        {/* Optional Heading */}
+        {/* <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold uppercase text-[#2d2f32] drop-shadow font-dm-serif leading-tight">
+          Helping you and your <br />
           house become better <br />
           acquainted
         </h1> */}
         <a
           href="#book-visit"
-          className="inline-block w-fit px-8 py-3 bg-[#8e6136] hover:bg-[#a18c5d] text-white font-semibold rounded shadow text-base uppercase tracking-wide transition-colors border-2 border-[#8e6136] hover:border-[#a18c5d] font-inter"
+          className="inline-block w-fit px-6 sm:px-8 py-2.5 sm:py-3 bg-[#8e6136] hover:bg-[#a18c5d] text-white font-semibold rounded shadow text-sm sm:text-base uppercase tracking-wide transition-colors border-2 border-[#8e6136] hover:border-[#a18c5d] font-inter"
         >
           Book A Site Visit
         </a>
       </div>
-      {/* Floating CTA icons (simulated for now, can add interactive links later) */}
-      <div className="absolute right-6 top-24 flex flex-col items-center gap-4">
+
+      {/* Floating CTA Icons */}
+      <div className="absolute right-4 sm:right-6 top-20 sm:top-24 flex flex-col items-center gap-3 sm:gap-4">
         <button className="rounded-full bg-white bg-opacity-60 p-2 shadow hover:scale-105 transition-transform border border-[#c2c8cc]">
           <svg width="24" height="24" fill="#8e6136" viewBox="0 0 24 24">
             <circle
@@ -56,9 +54,10 @@ const HeroSection = () => {
         </button>
       </div>
 
-      {/* Carousel thumbs preview - placeholder below hero, visible on desktop */}
+      {/* Optional Thumbnails (visible only on md+) */}
       <div className="hidden md:flex w-full absolute left-0 top-[78%] px-16 gap-4 justify-center z-10">
-        {/* <div className="w-56 h-32 bg-white/70 border rounded shadow overflow-hidden flex flex-col items-center justify-center">
+        {/* Example Thumbnail
+        <div className="w-56 h-32 bg-white/70 border rounded shadow overflow-hidden flex flex-col items-center justify-center">
           <img
             src="https://ext.same-assets.com/993979730/3064374608.jpeg"
             alt="Club House"
@@ -68,7 +67,6 @@ const HeroSection = () => {
             Club House
           </span>
         </div> */}
-        {/* Can add more thumbnails if needed */}
       </div>
     </section>
   );

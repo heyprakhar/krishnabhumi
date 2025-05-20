@@ -32,37 +32,41 @@ const NewsEventSection = () => {
   ];
 
   return (
-    <section id="news" className="relative bg-white pt-14 pb-16">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-7">
+    <section id="news" className="relative bg-white py-12 md:py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-5 mb-8">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold uppercase text-[#2d2f32] mb-2 font-dm-serif">
+            <h2 className="text-2xl sm:text-3xl font-bold uppercase text-[#2d2f32] mb-2 font-dm-serif">
               News & Event
             </h2>
-            <p className="text-[#939698] max-w-xl font-inter">
+            <p className="text-[#939698] max-w-2xl text-sm sm:text-base font-inter">
               There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form
+              but the majority have suffered alteration in some form.
             </p>
           </div>
           <a
             href="#"
-            className="inline-block bg-[#8e6136] hover:bg-[#a18c5d] text-white font-medium py-2 px-7 rounded shadow text-xs uppercase tracking-wide transition-colors border-2 border-[#8e6136] hover:border-[#a18c5d] mt-4 md:mt-0 font-inter"
+            className="inline-block bg-[#8e6136] hover:bg-[#a18c5d] text-white font-medium py-2 px-6 rounded shadow text-xs uppercase tracking-wide transition-colors border-2 border-[#8e6136] hover:border-[#a18c5d] font-inter"
           >
-            View All Post
+            View All Posts
           </a>
         </div>
-        {/* Blog cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {newsEvents.map((item) => (
             <div
               key={item.title + item.img}
               className="bg-[#f9f8f7] border rounded-2xl shadow hover:shadow-lg transition-shadow group overflow-hidden flex flex-col h-full"
             >
-              <img
-                src={item.img}
-                alt={item.title}
-                className="w-full h-48 object-cover"
-              />
+              <div className="w-full aspect-video overflow-hidden">
+                <img
+                  src={item.img}
+                  alt={item.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div className="flex-1 p-5 flex flex-col">
                 <div className="flex items-center justify-between text-xs text-[#b7a69c] mb-2 font-inter">
                   <span>{item.date}</span>
@@ -76,7 +80,7 @@ const NewsEventSection = () => {
                 >
                   {item.title}
                 </a>
-                <div className="text-sm text-[#939698] mb-4 line-clamp-2 font-inter">
+                <div className="text-sm text-[#939698] mb-4 line-clamp-3 font-inter">
                   {item.excerpt}
                 </div>
                 <a

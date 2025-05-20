@@ -48,7 +48,7 @@ const SpecificationsSection = () => {
   return (
     <section
       id="specifications"
-      className="relative bg-white pt-12 pb-16 overflow-hidden"
+      className="relative bg-white py-10 sm:py-14 md:py-16 overflow-hidden"
       style={{
         backgroundImage: `url(${bgspec})`,
         backgroundSize: "cover",
@@ -58,39 +58,39 @@ const SpecificationsSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-white/70 backdrop-brightness-95 z-0" />
 
-      <div className="relative z-20 max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-8 items-start">
-        {/* Section Image with Hover Animation */}
-        <div className="flex-shrink-0 w-full md:w-1/2 flex items-center justify-center py-4">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-8">
+        {/* Left Image */}
+        <div className="w-full md:w-1/2 flex items-center justify-center">
           <img
             src="https://ext.same-assets.com/993979730/978028508.jpeg"
             alt="Specifications"
-            className="rounded-lg shadow-lg w-[340px] h-[220px] object-cover border transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl"
+            className="rounded-lg shadow-lg w-full max-w-[340px] sm:max-w-[420px] h-[200px] sm:h-[240px] md:h-[260px] object-cover border transition duration-500 ease-in-out hover:scale-105 hover:shadow-xl"
           />
         </div>
 
-        {/* Right Side */}
+        {/* Right Content */}
         <div className="w-full md:w-1/2 flex flex-col gap-5">
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold uppercase text-[#2d2f32] mb-2 font-dm-serif">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold uppercase text-[#2d2f32] mb-2 font-dm-serif">
               Specifications
             </h2>
-            <p className="text-[#555] mb-4 max-w-lg font-inter">
+            <p className="text-[#555] text-sm sm:text-base mb-4 max-w-lg font-inter">
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form.
             </p>
             <a
               href="#services"
-              className="inline-block bg-[#8e6136] hover:bg-[#a18c5d] text-white font-medium py-2 px-6 rounded shadow text-xs uppercase tracking-wide transition-colors border-2 border-[#8e6136] hover:border-[#a18c5d] mb-2 font-inter"
+              className="inline-block bg-[#8e6136] hover:bg-[#a18c5d] text-white font-medium py-2 px-5 sm:px-6 rounded shadow text-xs sm:text-sm uppercase tracking-wide transition-colors border-2 border-[#8e6136] hover:border-[#a18c5d] font-inter"
             >
               View All Services
             </a>
           </div>
 
-          {/* Accordion */}
+          {/* Accordion List */}
           <div className="w-full divide-y rounded-lg bg-[#f9f8f7]/90 border">
             {specifications.map((item, i) => (
               <details key={item.label} className="group p-0" open={i === 0}>
-                <summary className="flex items-center justify-between cursor-pointer px-4 py-3 text-[#2d2f32] font-semibold group-open:bg-[#f4eadd] transition-colors font-inter">
+                <summary className="flex items-center justify-between cursor-pointer px-4 py-3 text-[#2d2f32] text-sm sm:text-base font-semibold group-open:bg-[#f4eadd] transition-colors font-inter">
                   <span>{item.label}</span>
                   <span className="ml-4 transition-transform group-open:rotate-90">
                     <svg
