@@ -22,40 +22,43 @@ const Navbar = () => {
             alt="King Architect Logo"
             className="h-10 w-auto"
           />
-          <span className="text-2xl tracking-wider font-bold text-white uppercase font-dm-serif">
-            <span className="text-[#a18c5d]">KrishnaBhumi</span>
+          <span className="text-2xl tracking-wider font-bold text-[#f5f2eb] uppercase font-dm-serif">
+            <span className="text-[#e3c78f]">KrishnaBhumi</span>
           </span>
         </div>
+
         {/* Nav Links */}
-        <ul className="hidden md:flex gap-8 text-white font-medium text-base font-inter">
+        <ul className="hidden md:flex gap-8 text-[#f5f2eb] font-medium text-base font-inter">
           {NAV_LINKS.map((item) => (
             <li key={item.name}>
               <a
                 href={item.href}
-                className="hover:text-[#a18c5d] transition-colors"
+                className="hover:text-[#e3c78f] transition-colors"
               >
                 {item.name}
               </a>
             </li>
           ))}
         </ul>
+
         {/* Apply Now Button */}
         <a
           href="#apply"
-          className="bg-[#a18c5d] hover:bg-[#c2aa6e] text-white font-semibold rounded px-5 py-2 shadow transition-colors text-sm font-inter"
+          className="bg-[#e3c78f] hover:bg-[#c8aa66] text-[#2d2f32] font-semibold rounded px-5 py-2 shadow transition-colors text-sm font-inter"
         >
           Apply Now
         </a>
+
         {/* Mobile Nav (Hamburger) */}
         <div className="md:hidden">
           <button
-            className="text-white focus:outline-none"
+            className="text-[#f5f2eb] focus:outline-none"
             aria-label="Open menu"
           >
             <svg width="28" height="28" fill="currentColor" viewBox="0 0 20 20">
               <path
                 d="M2.5 6h15M2.5 10h15M2.5 14h15"
-                stroke="white"
+                stroke="#f5f2eb"
                 strokeWidth="2"
                 strokeLinecap="round"
               />

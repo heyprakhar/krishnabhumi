@@ -1,5 +1,5 @@
 import React from "react";
-
+import bgsiteplan from "../assets/pic22.jpeg";
 
 const SitePlanMasterPlanSection = () => {
   const planTypes = [
@@ -12,8 +12,21 @@ const SitePlanMasterPlanSection = () => {
   ];
 
   return (
-    <section id="siteplan" className="relative bg-white py-14 md:py-20">
-      <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-10 md:gap-16 items-start">
+    <section
+      id="siteplan"
+      className="relative py-14 md:py-20 bg-white overflow-hidden"
+    >
+      {/* Faded background image */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={bgsiteplan}
+          alt="Background"
+          className="w-full h-full object-cover opacity-10"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-10 md:gap-16 items-start">
         {/* Left: Plans List */}
         <div className="w-full md:w-2/5 flex flex-col gap-5">
           <h2 className="text-2xl md:text-3xl font-bold uppercase text-[#2d2f32] mb-2 font-dm-serif">
@@ -34,6 +47,7 @@ const SitePlanMasterPlanSection = () => {
               </span>
             ))}
           </div>
+
           {/* Price/highlighted block for plan */}
           <div className="bg-[#f9f8f7] border rounded-xl px-6 py-5 w-full shadow-sm mb-4">
             <div className="flex items-center justify-between mb-2">
@@ -51,7 +65,6 @@ const SitePlanMasterPlanSection = () => {
               low flow fixtures, Improved indoor air quality through the usage
               of low.
             </div>
-            {/* Specs */}
             <div className="grid grid-cols-2 gap-3 text-xs font-bold mb-2 font-inter">
               <div className="flex items-center gap-2">
                 <span className="text-[#a18c5d] text-lg font-dm-serif">
@@ -80,6 +93,7 @@ const SitePlanMasterPlanSection = () => {
             </a>
           </div>
         </div>
+
         {/* Right: Plan image */}
         <div className="w-full md:w-3/5 flex flex-col items-center">
           <img

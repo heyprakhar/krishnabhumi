@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import LocomotiveScroll from "locomotive-scroll";
 import "./index.css";
+
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import SpecificationsSection from "./components/SpecificationsSection";
@@ -10,8 +12,26 @@ import NewsEventSection from "./components/NewsEventSection";
 import Footer from "./components/Footer";
 
 export default function App() {
+  const scrollRef = useRef(null);
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      lerp: 0.08, // adjust for smoothness
+    });
+
+    return () => {
+      scroll.destroy();
+    };
+  }, []);
+
   return (
-    <div className="bg-[#f9f8f7] min-h-screen font-inter">
+    <div
+      ref={scrollRef}
+      data-scroll-container
+      className="bg-[#f9f8f7] font-inter"
+    >
       <Navbar />
       <HeroSection />
       <SpecificationsSection />
