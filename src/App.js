@@ -17,8 +17,7 @@ export default function App() {
   useEffect(() => {
     const scroll = new LocomotiveScroll({
       el: scrollRef.current,
-      smooth: true,
-      lerp: 0.08, // adjust for smoothness
+      smooth: false, 
     });
 
     return () => {
