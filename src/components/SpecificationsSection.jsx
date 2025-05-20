@@ -1,4 +1,5 @@
 import React from "react";
+import bgspec from "../assets/pic11.jpeg";
 
 const SpecificationsSection = () => {
   const specifications = [
@@ -45,16 +46,24 @@ const SpecificationsSection = () => {
     <section
       id="specifications"
       className="relative bg-white pt-12 pb-16 overflow-hidden"
+      style={{
+        backgroundImage: `url(${bgspec})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
     >
+      {/* Overlay for darkening */}
+      <div className="absolute inset-0 bg-white/70 backdrop-brightness-95 z-0" />
+
       {/* Large faint background text */}
-      <span
-        className="absolute left-4 top-8 text-[72px] md:text-[140px] font-bold text-[#ededed] uppercase tracking-wide z-0 pointer-events-none select-none opacity-60 font-dm-serif"
+      {/* <span
+        className="absolute left-4 top-8 text-[72px] md:text-[140px] font-bold text-[#ededed] uppercase tracking-wide z-10 pointer-events-none select-none opacity-60 font-dm-serif"
         style={{ letterSpacing: "5px", whiteSpace: "nowrap" }}
       >
         SPECIFICATIONS
-      </span>
+      </span> */}
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-8 items-start">
+      <div className="relative z-20 max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-8 items-start">
         {/* Section image */}
         <div className="flex-shrink-0 w-full md:w-1/2 flex items-center justify-center py-4">
           <img
@@ -70,9 +79,9 @@ const SpecificationsSection = () => {
             <h2 className="text-2xl md:text-3xl font-bold uppercase text-[#2d2f32] mb-2 font-dm-serif">
               Specifications
             </h2>
-            <p className="text-[#939698] mb-4 max-w-lg font-inter">
+            <p className="text-[#555] mb-4 max-w-lg font-inter">
               There are many variations of passages of Lorem Ipsum available,
-              but the majority have suffered alteration in some form
+              but the majority have suffered alteration in some form.
             </p>
             <a
               href="#services"
@@ -83,7 +92,7 @@ const SpecificationsSection = () => {
           </div>
 
           {/* Accordion */}
-          <div className="w-full divide-y rounded-lg bg-[#f9f8f7] border">
+          <div className="w-full divide-y rounded-lg bg-[#f9f8f7]/90 border">
             {specifications.map((item, i) => (
               <details key={item.label} className="group p-0" open={i === 0}>
                 <summary className="flex items-center justify-between cursor-pointer px-4 py-3 text-[#2d2f32] font-semibold group-open:bg-[#f4eadd] transition-colors font-inter">
@@ -101,7 +110,7 @@ const SpecificationsSection = () => {
                     </svg>
                   </span>
                 </summary>
-                <div className="px-4 pb-3 text-[#939698] text-sm animate-fade-in-up font-inter">
+                <div className="px-4 pb-3 text-[#555] text-sm animate-fade-in-up font-inter">
                   {item.content}
                 </div>
               </details>
