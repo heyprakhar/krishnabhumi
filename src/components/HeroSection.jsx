@@ -28,7 +28,7 @@ const HeroSection = () => {
       </div>
 
       {/* Floating CTA Icons */}
-      <div className="absolute right-4 sm:right-6 top-20 sm:top-24 flex flex-col items-center gap-3 sm:gap-4">
+      {/* <div className="absolute right-4 sm:right-6 top-20 sm:top-24 flex flex-col items-center gap-3 sm:gap-4">
         <button className="rounded-full bg-white bg-opacity-60 p-2 shadow hover:scale-105 transition-transform border border-[#c2c8cc]">
           <svg width="24" height="24" fill="#8e6136" viewBox="0 0 24 24">
             <circle
@@ -52,7 +52,7 @@ const HeroSection = () => {
             />
           </svg>
         </button>
-      </div>
+      </div> */}
 
       {/* Optional Thumbnails (visible only on md+) */}
       <div className="hidden md:flex w-full absolute left-0 top-[78%] px-16 gap-4 justify-center z-10">
