@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./index.css";
+import Navbar from "./components/Navbar";
+import HeroSection from "./components/HeroSection";
+import SpecificationsSection from "./components/SpecificationsSection";
+import SitePlanMasterPlanSection from "./components/SitePlanMasterPlanSection";
+import BuildingServicesSection from "./components/BuildingServicesSection";
+import ProjectsOverviewSection from "./components/ProjectsOverviewSection";
+import NewsEventSection from "./components/NewsEventSection";
+import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-[#f9f8f7] min-h-screen font-inter">
+      <Navbar />
+      <HeroSection />
+      <SpecificationsSection />
+      <SitePlanMasterPlanSection />
+      <BuildingServicesSection />
+      <ProjectsOverviewSection />
+      <NewsEventSection />
+      <Footer />
     </div>
   );
 }
-
-export default App;
